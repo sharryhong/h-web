@@ -1,0 +1,433 @@
+@charset "utf-8";
+
+/* CSS Document */
+@import "base/reset.css";
+@import "base/font.css";
+@import "base/common.css";
+
+/*main color : #e0002a; border : #dedede; background : #fcfcfc,#fafafa*/
+
+/*main page*/
+#contents{
+    width: 100%;
+    padding-top: 114px;
+    outline: none;
+}
+.main-visual{
+    position: relative;
+    width: 100%;
+    background-color: #FBFBFB;
+    overflow: hidden;
+}
+.main-visual960{
+    position: relative;
+    max-width: 960px;
+    min-height: 170px;
+    margin: 0 auto;
+}
+.main-visual-slider li{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.main-visual-slider li:first-child{display: block;}
+.main-visual img{
+    width: 100%;
+    min-height: 170px;
+    vertical-align: middle;
+}
+.main-visual-text{
+    position: absolute;
+    top: 5%;
+    width: 70%;
+    margin-left: 10px;
+}
+.main-visual-text p{
+    margin-top: 1em;
+    text-shadow: 1px 0px #fff, 0px 1px #fff, -1px 0px #fff, 0px -1px #fff;
+}
+.main-visual .indicator{
+    position: absolute;
+    bottom: 2%;
+    left: 2%;
+}
+.main-visual .indicator li{
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+.main-visual .indicator a{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    overflow: hidden;
+    text-indent: -9999px;
+    background: #fff;
+    border:1px solid #ccc;
+    border-radius: 10px;
+}
+.main-visual .indicator li.on a{background: #ee7421;}
+.main-visual .indicator li.play a{
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+    text-align: center;
+    line-height: 30px;
+    background: #ddd;
+    border-radius: 5px;
+}
+.main-visual .indicator li.play{position: relative;}
+.main-visual .indicator li.play a:after{
+    font-family: 'FontAwesome';
+    content: "\f04c";
+    position: absolute;
+    right: 7px;
+    top: -3px;
+    text-indent: 0;
+}
+.main-visual .indicator li.play span{
+    text-indent: -9999px;
+    overflow: hidden;
+}
+.main-visual .indicator li.play.on a:after{
+    font-family: 'FontAwesome';
+    content: "\f04b";
+    position: absolute;
+    right: 7px;
+    top: -3px;
+    text-indent: 0;
+}
+
+.main-contents{margin: 21px auto 40px auto;}
+.main-content{
+    position: relative;
+    padding-bottom: 115px;
+    margin: 10px;
+}
+.main-contents .con01{background: url(../images/img_industry.gif) center bottom no-repeat;}
+.main-contents .con02{background: url(../images/img_business.gif) center bottom no-repeat;}
+.main-contents .view{
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 3px;
+}
+
+body.main .keytopics{
+    padding: 30px 10px;
+    margin: 0 auto;
+    background-color: #fafafa;
+}
+body.main .keytopics-head{
+    padding-bottom: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+body.main .keytopics-list{
+    height: 100px;
+    padding-left: 85px;
+    padding-top: 30px;
+    border-bottom: 1px solid #ccc;
+}
+body.main .keytopics-list.list01,
+body.main .keytopics-list.list02,
+body.main .keytopics-list.list03,
+body.main .keytopics-list.list04{
+    background-position: left;
+    background-repeat: no-repeat;
+}
+body.main .keytopics-list.list01{background-image: url(../images/img_solution2.gif);}
+body.main .keytopics-list.list02{background-image: url(../images/img_solution1.gif);}
+body.main .keytopics-list.list03{background-image: url(../images/img_solution3.gif);}
+body.main .keytopics-list.list04{background-image: url(../images/img_solution5.gif);}
+
+body.main .pr-contents{ 
+    width: 100%; 
+    padding: 10px;
+}
+body.main .pr-content{
+    position: relative;
+    margin-bottom: 20px;
+}
+body.main .pr-contents960{
+    max-width: 960px;
+    margin: 30px auto;
+}
+body.main .pr-content h3{border-bottom: 1px solid #ccc;}
+body.main .pr-image img{
+    width: 100%;
+    height: 100%;
+}
+body.main .pr-content .view{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px;
+}
+body.main .pr-bottom h5{
+    width: 100%;
+    margin: 10px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+body.main .pr-bottom h5:before{content: '· ';}
+body.main .pr-bottom p.small{
+    width: inherit;
+    height: 70px;
+    overflow: hidden;
+}
+
+/*sub page common*/
+body.sub #bread_crumb{
+    padding: 5px 10px;
+    background: #fafafa;
+    border-bottom: 1px solid #ccc;
+}
+body.sub #bread_crumb li{float: left;}
+body.sub #bread_crumb li a{
+    display: inline-block;
+    padding: 5px 10px;
+    line-height: 14px;
+}
+body.sub #bread_crumb li+li:before{
+    content: '>';
+    width: 3px;
+    height: 5px;
+}
+body.sub .section{padding: 10px 10px 40px 10px;}
+body.sub .section h3{
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    line-height: 3.5em;
+    border-bottom: 1px solid #ccc;
+}
+body.sub .sub-visual{display: none;}
+body.sub .sub-visual h1{display: none;}
+body.sub #lnb{display: none;}
+body.sub .sub-main{width: 100%;}
+
+/*sub page introduce_01*/
+body.introduce_01 .contents strong{
+    display: block;
+    font-size: 2.14em;
+    font-weight: bold;
+    line-height: 2em;
+}
+body.introduce_01 .contents em{
+    font-size: 1.29em;
+    font-weight: bold;
+    line-height: 1.5em;
+}
+body.introduce_01 .contents img{
+    display: block;
+    width: 264px;
+    margin: 10px auto 30px auto;
+}
+
+/*sub page business*/
+body.business .section em{color: #e0002a;}
+body.business .contents02 h4{
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    line-height: 3.5em;
+    border-bottom: 1px solid #ccc;
+    color: #333;
+}
+body.business .contents02 .list{
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+body.business .contents02 .list h5{
+    color: #e0002a;
+    font-size: 1.1em;
+    line-height: 2em;
+}
+
+/*sub page prcenter*/
+body.prcenter .mainnews{
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+}
+body.prcenter .mainnews-contents{
+    padding: 10px 20px 0 20px;
+    border: 1px solid #ccc;
+    background: #fefefe;
+    text-align: left;
+}
+body.prcenter .mainnews-contents h4{
+    width: 100%;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1.3em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+body.prcenter .mainnews-contents p.con{
+    max-height: 4.5em;
+    overflow: hidden;
+}
+body.prcenter .mainnews-contents p.date{
+    line-height: 0;
+    font-size: 0.85em;
+    text-align: right;
+}
+body.prcenter .newslist_top{
+    float: right;
+    margin-bottom: 10px;
+}
+body.prcenter form *{
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+body.prcenter .newslist_top select{
+    width: 80px;
+    height: 25px;
+    padding-left: 7px;
+    border: 1px solid #ccc;
+}
+body.prcenter .newslist_top input[type=text]{
+    width: 160px;
+    height: 25px;
+    padding-left: 7px;
+    margin-left: 3px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+    color: #333;
+}
+body.prcenter .newslist_top input[type=text]::-webkit-input-placeholder{color: #aaa;}
+body.prcenter .newslist_top input[type=text]::-moz-placeholder{color: #aaa;}
+body.prcenter .newslist_top input[type=text]:-ms-input-placeholder{color: #aaa;}
+body.prcenter .newslist_top button{
+    width: 45px;
+    height: 25px;
+    margin-left: 4px;
+    border: 1px solid #666;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    background: #666;
+    cursor: pointer;
+}
+
+/*Module*/
+/*게시판*/
+table.list{
+    width: 100%; 
+    margin-bottom: 25px;
+}
+table.list td{
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+table.list thead th{
+    padding: 13px 10px;
+    border-top: 2px solid #aaa;
+    border-bottom: 1px solid #ccc;
+    background: #fafafa;
+}
+table.list td.title{
+    max-width: 1px;
+    text-align: left;
+}
+table.list td.title a{
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/*게시판의 페이지 번호*/
+.pagination{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.pagination > a{
+    display: inline-block;
+    padding: 3px 10px;
+    margin-top: 3px;
+    background: #fafafa;
+    vertical-align: bottom;
+    border: 1px solid #ccc;
+}
+.pagination > a i{
+    vertical-align: text-top;
+    font-size: 16px;
+}
+.pagination ol{
+    display: inline-block;
+    margin: 0 8px;
+}
+.pagination ol li{display: inline-block;}
+.pagination ol li a{
+    display: inline-block;
+    padding: 4px 10px;
+    margin-top: 3px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+}
+.pagination ol li.on a{
+    color: #fff;
+    font-weight: bold;
+    border: 1px solid #e0002a;
+    background: #e0002a;
+}
+
+/*게시판 내용페이지*/
+
+table.view{width: 100%;}
+table.view thead th{
+    padding: 15px;
+    background: #fafafa;
+    border-top: 2px solid #aaa;
+    border-bottom: 1px solid #ccc;
+}
+table.view thead th:first-child:after,
+table.view thead th:last-child:before{
+    content: '|';
+    margin: 0 10px;
+    color: #999;
+}
+table.view th.title{
+    max-width: 1px;
+    padding-left: 0;
+}
+table.view th.title span{
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+table.view .content{
+    width: 100%;
+    padding: 30px 0;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+table.view .content img{
+    margin-bottom: 20px;
+    vertical-align: middle;
+}
+table.view .content p{text-align: left;}
+/*버튼*/
+.red_button a{
+    padding: 8px 12px;
+    background: #e0002a;
+    border: 1px solid #333;
+    color: #fff;
+}
+.golist.red_button{
+    float: right;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}

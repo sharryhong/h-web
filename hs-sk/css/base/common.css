@@ -1,0 +1,234 @@
+body, input, textarea, button, pre {
+    font: 87.5%/1.5 'Nanum Gothic', Dotum, Arial, Verdana, sans-serif;
+    color: #333;
+    background: #fff;
+}
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+h2{ font-size: 1.5em;}
+p{font-size: 0.86em;}
+
+body.no-scroll{
+    overflow-y: hidden;
+/*메뉴 나올 때 스크롤 안보이게함*/
+}
+body{position: relative;}
+
+.skip-menu a{
+    position: absolute;
+    top: -30px;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    color: #fff;
+    line-height: 30px;
+    background: rgba(0,0,0,0.7);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#90000000,endColorstr=#90000000);
+    opacity: 0;
+    z-index: 100;
+}
+/*키보드로 접근할 때 메뉴 스킵할 수 있도록 하기*/
+
+#wrapper{min-width: 320px;}
+#menu-cover{
+    position: fixed; 
+    display: block;
+    width: 2000px; 
+    height: 2000px; 
+    background: rgba(0,0,0,0.5);
+    z-index: 60;
+} /*메뉴 나올 때 투명검은커버*/
+.sub-bg{
+    position: absolute;
+    top: 84px;
+    width: 100%;
+    height: 200px;
+    background: #fcfcfc;
+    border-bottom: 1px solid #dedede;    
+} /*서브메뉴 나올 때 배경*/
+header{
+    position: fixed;
+    width:100%;
+    z-index: 10;
+}
+header .header-top{
+    height: 30px;
+    background: #fafafa;
+}
+header .header-top960{
+    position: relative;
+    max-width: 960px;
+    margin: 0 auto;
+}
+header .link{width: 100%;}
+header .link li{
+    float: left;
+    width: 25%;
+    font-size: 12px;
+}
+header .link a{
+    display: inline-block;
+    width: 100%;
+    line-height: 30px;
+    text-align: center;
+    border-left: 1px solid #dedede;
+}
+header .link a:hover, header .link li.on{
+    color: #fff;
+    background: #e0002a;
+}
+header .header-bottom{
+    position: relative;
+    width: 100%;
+    height: 84px;
+    border-bottom: 1px solid #dedede;
+    background: #fff;
+}
+header .header-bottom960{
+    max-width: 960px;
+    margin: 0 auto;
+}
+header h1{
+    float: left;
+    padding: 10px;
+}
+header .gnb{
+    position: absolute;
+    top: -30px;
+    right: -80%;
+    width: 80%;
+    background: #fff;
+    z-index: 100;
+    opacity: 0;
+} 
+/*애니메이션을 css3로 하였더니 IE8에서 안되어 jQuery로 바꿈*/
+
+header .gnb > ul{
+    margin-top: 40px;
+}
+header .gnb > ul > li{
+    background: #eee;
+    border-bottom: 1px solid #ccc;
+}
+header .gnb > ul > li >a{
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    padding-left: 10px;
+    line-height: 50px;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+header .gnb > ul a:hover{
+    color: #e0002a;;
+}
+header .sub-menu a{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 15px 25px;
+}
+header .sub-menu a:before{
+    font-family: 'FontAwesome';
+    content: "\f105";    
+    position: absolute;
+    left: 15px;
+}
+header .sub-menu li{
+    border-top: 1px solid #ccc;
+    background: #fafafa;
+}
+
+header .menu{
+    position: absolute;
+    top: 30px;
+    right: 1.5%;
+    display: inline-block;
+    color: hsl(0, 0%, 40%);
+}
+header .menu-close{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    color: hsl(0, 0%, 100%);
+    background: hsl(0, 0%, 40%);
+}
+header .menu-close a{
+    float: right;
+    padding-right: 5px;
+    padding-top: 6px;
+}
+
+footer{
+    width: 100%;
+}
+.footer-top{
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+}
+.footer-top960{
+    position: relative;
+    max-width: 960px;
+    height: 110px;
+    margin: 0 auto;
+}
+.footer-top .siteinfo li{
+    float: left;
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    line-height: 30px;
+    font-size: 0.9em;
+    font-weight: bold;
+    border-bottom: 1px solid #dedede;
+    border-right: 1px solid #dedede;
+    background: hsl(0, 0%, 95%);
+}
+.footer-top .siteinfo li:nth-child(2),
+.footer-top .siteinfo li:nth-child(4){border-right: none;}
+.footer-top .siteinfo li em{color: #e0002a;}
+.footer-top .siteinfo li a{
+    display: block;
+    height: 30px;
+}
+
+footer .sns{
+    position: absolute;
+    bottom: 4px;
+    right: 10px;
+}
+footer .sns li{
+    float: left;
+    padding-left: 5px;
+}
+footer .sns a{
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+footer .sns .twitter{background: url(../../images/icon_social.png) no-repeat;}
+footer .sns .facebook{background: url(../../images/icon_social.png) -37px 0 no-repeat;}
+footer .sns .blog{background: url(../../images/icon_social.png) 0 -37px no-repeat;}
+footer .sns .youtube{background: url(../../images/icon_social.png) -37px -37px no-repeat;}
+footer .sitelink{display: none;}
+.footer-bottom{
+    position: relative;
+    max-width: 960px;
+    padding: 10px;
+    margin: 15px auto;
+}
+.footer-bottom h2{display: inline-block;}
+.footer-bottom .skinfo{
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    width: 60%;
+    text-align: right;
+}
+.footer-bottom address{margin-bottom: 5px;}
